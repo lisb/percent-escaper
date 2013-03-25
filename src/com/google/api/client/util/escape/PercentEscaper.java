@@ -60,7 +60,12 @@ public class PercentEscaper extends UnicodeEscaper {
    * A string of safe characters that mimics the behavior of {@link java.net.URLEncoder}.
    */
   public static final String SAFECHARS_URLENCODER = "-_.*";
-
+  
+  /**
+   * A string of safe characters that is equivalent to encodeURIComponent function in Javascript.
+   */
+  public static final String SAFECHARS_URICOMPONENTENCODER = "-_.!~*'()";
+  
   /**
    * A string of characters that do not need to be encoded when used in URI path segments, as
    * specified in RFC 3986. Note that some of these characters do need to be escaped when used in
