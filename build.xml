@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="percent-escaper" basedir="." default="jar">
+
+  <property name="src" value="src" />
+  <property name="classes" value="bin" />
+
+  <target name="jar" depends="compile">
+    <jar jarfile="${ant.project.name}.jar">
+      <fileset dir="${classes}">
+        <include name="**/*.class" />
+      </fileset>
+    </jar>
+  </target>
+
+  <target name="compile">
+    <delete dir="${classes}" includeemptydirs="yes" />
+    <mkdir dir="${classes}" />
+    <javac srcdir="${src}"
+           destdir="${classes}"
+           encoding="UTF-8"
+           debug="on"
+           debuglevel="lines,source"
+           optimize="on"
+           deprecation="on">
+    </javac>
+  </target>
+</project>
